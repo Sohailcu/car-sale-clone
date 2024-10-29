@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image";
-import CarAddForm from "../CarAddForm/CarAddForm";
+import CarSalesForm from "../CarAddForm/CarAddForm";
 
 export default function Navbar() {
     return (
@@ -24,7 +24,7 @@ export default function Navbar() {
                <Link href="/" className="text-white text-md font-semibold font-sans w- h-8 hover:text-red-500 cursor-pointer">Blogs⏷</Link>
                <Link href="/" className="text-white text-md font-semibold font-sans w- h-8 hover:text-red-500 cursor-pointer">More⏷</Link>
                 <div className="bg-red-500 text-white py-2 px-8 text-lg font-semibold font-sans rounded-lg hover:bg-red-700 cursor-pointer">
-                     <button onClick={CarAddForm}>Post an Ad⏷</button>
+                     <button onClick={CarSalesForm}>Post an Ad⏷</button>
                 </div>
             </div>
         </nav>

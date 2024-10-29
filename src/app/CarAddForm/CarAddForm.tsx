@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useState, ChangeEvent, FormEvent } from "react";
 
 export default function CarSalesForm() {
     const router = useRouter();
@@ -13,12 +13,14 @@ export default function CarSalesForm() {
         description: "",
     });
 
-    const handleChange = (e) => {
+    // Set explicit type for ChangeEvent
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e) => {
+    // Set explicit type for FormEvent
+    const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
         // Perform validation or data submission here
         console.log("Form data submitted:", formData);
